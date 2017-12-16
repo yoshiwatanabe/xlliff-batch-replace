@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Linq;
 using System.IO;
-using System.Reflection;
 using XLIFFBatch.Schema;
 using Microsoft.Extensions.Configuration;
+using XLIFFBatch.Logics;
 using XLIFFBatch.Models;
-using System.Collections.Generic;
 
 namespace XLIFFBatch
-{
-    
+{   
     class Program
     {
         static void Main(string[] args)
         {
-            var builder = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("settings.json");
-
-            var Configuration = builder.Build();
+            var Configuration = (new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("settings.json")).Build();
 
             var mapfile = Configuration["mapfile"];
             var mapItemDelimiter = Configuration["mapItemDelimiter"];
@@ -36,18 +32,27 @@ namespace XLIFFBatch
             {
                 Console.WriteLine("Error: one of the input parameters is invalid. Please check settings.json");
             }
+            
+            var workUnits = (new DirectoryInfo(inputDirectory))
+                .GetFiles()
+                .Select(_ => new Tuple<string, string>(_.FullName, _.Name))
+                .Select(t => new WorkUnit
+            {
+                InputFilePath = t.Item1,
+                OutputFilePath = Path.Combine(Path.Combine(Directory.GetCurrentDirectory(), outputDirectory), t.Item2),
+            });
 
             var replacements = FileAccessUtility.ReadReplacements(mapItemDelimiter, Path.Combine(Directory.GetCurrentDirectory(), mapfile));
-            var xliffs = FileAccessUtility.ReadXliffFiles((new DirectoryInfo(inputDirectory)).GetFiles().Select(_ => _.FullName));
 
-            // TODO: scan can replace
-        }
+            foreach (var workUnit in FileAccessUtility.ReadXliffFiles(workUnits))
+            {
+                if (SearchAndReplace.Process(replacements, workUnit.Xliff.file[0]))
+                {
+                    FileAccessUtility.WriteXllfFile(workUnit);
+                }
+            }
 
-        private static void NewMethod(TextReader str)
-        {
-            System.Xml.Serialization.XmlSerializer xSerializer = new System.Xml.Serialization.XmlSerializer(typeof(xliff));
-            var xliff = xSerializer.Deserialize(str) as xliff;
-            str.Close();
+            Console.WriteLine("Done");
         }
     }
 }

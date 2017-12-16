@@ -33,16 +33,26 @@ namespace XLIFFBatch
             return result;
         }
 
-        public static IEnumerable<xliff> ReadXliffFiles(IEnumerable<string> xliffFilePaths)
+        public static IEnumerable<WorkUnit> ReadXliffFiles(IEnumerable<WorkUnit> workUnits)
         {
-            return xliffFilePaths.Select(_ =>
+            return workUnits.Select(workUnit =>
             {
-                using (var streamReader = new StreamReader(_))
+                using (var streamReader = new StreamReader(workUnit.InputFilePath))
                 {
-                    var xSerializer = new XmlSerializer(typeof(xliff));
-                    return xSerializer.Deserialize(streamReader) as xliff;
+                    var serializer = new XmlSerializer(typeof(xliff));
+                    workUnit.Xliff = serializer.Deserialize(streamReader) as xliff;
+                    return workUnit;
                 }
             }).ToArray();
+        }
+
+        public static void WriteXllfFile(WorkUnit workUnit)
+        {
+            using (var streamWriter = new StreamWriter(workUnit.OutputFilePath))
+            {
+                var serializer = new XmlSerializer(typeof(xliff));
+                serializer.Serialize(streamWriter, workUnit.Xliff);
+            }
         }
     }
 }

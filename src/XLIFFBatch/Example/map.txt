@@ -1,2 +1,3 @@
-﻿hello|||こんにちは
-how are you||| 元気ですか
+﻿Binary|||バイナリー
+variable||| 変数
+Variable|||変数

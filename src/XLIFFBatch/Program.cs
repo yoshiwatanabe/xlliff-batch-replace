@@ -52,7 +52,7 @@ namespace XLIFFBatch
                 }
             }
 
-            Console.WriteLine("Done");
+            Console.WriteLine("\nDone");
         }
     }
 }

@@ -20,8 +20,12 @@ namespace XLIFFBatch.Logics
         {
             bool replaced = false;
 
+            Console.WriteLine("Process file unit started...");
+
             foreach (transunit unit in file.body)
             {
+                Console.Write("#");
+           
                 var statement = unit.target.Text[0];
 
                 if (SkipLineHints.Any(_ => statement.IndexOf(_) != -1))

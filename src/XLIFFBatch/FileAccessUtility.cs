@@ -18,7 +18,7 @@ namespace XLIFFBatch
             {
                 var line = streamReader.ReadLine();
                 while (line != null)
-                {
+                {                    
                     var items = line.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
                     result.Add(new Replacement
                     {

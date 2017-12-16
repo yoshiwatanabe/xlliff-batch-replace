@@ -1,0 +1,2 @@
+﻿hello|||こんにちは
+how are you||| 元気ですか

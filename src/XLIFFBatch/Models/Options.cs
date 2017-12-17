@@ -9,5 +9,6 @@ namespace XLIFFBatch.Models
     public class Options
     {
         public bool ReplaceWholeWord { get; set; }
+        public bool CaseSensitive { get; set; }
     }
 }

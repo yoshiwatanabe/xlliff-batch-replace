@@ -21,6 +21,7 @@ namespace XLIFFBatch
             var inputDirectory = Configuration["inputDirectory"];
             var outputDirectory = Configuration["outputDirectory"];
             bool replaceWholeWord = bool.Parse(Configuration["options:replaceWholeWord"]);
+            bool caseSensitive = bool.Parse(Configuration["options:caseSensitive"]);
 
             Console.WriteLine($"mapfile: {mapfile}");
             Console.WriteLine($"mapItemDelimiter: {mapItemDelimiter}");
@@ -36,7 +37,8 @@ namespace XLIFFBatch
 
             var options = new Options
             {
-                ReplaceWholeWord = replaceWholeWord
+                ReplaceWholeWord = replaceWholeWord,
+                CaseSensitive = caseSensitive
             };
             
             var workUnits = (new DirectoryInfo(inputDirectory))

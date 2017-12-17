@@ -22,6 +22,10 @@ namespace XLIFFBatch.Logics
 
             Console.WriteLine("Process file unit started...");
 
+            StringComparison stringComparisonOption = options.CaseSensitive ? 
+                StringComparison.InvariantCulture : 
+                StringComparison.InvariantCultureIgnoreCase;
+
             foreach (transunit unit in file.body)
             {
                 Console.Write("#");
@@ -35,20 +39,20 @@ namespace XLIFFBatch.Logics
                 
                 foreach (var replacement in replacements)
                 {
-                    int pos = statement.IndexOf(replacement.SourceString);
+                    int pos = statement.IndexOf(replacement.SourceString, stringComparisonOption);
                     while (pos != -1 && 
                         (options.ReplaceWholeWord && TestWholeWord(replacement.SourceString, pos, statement))
                         )
                     {
-                        statement = statement.Replace(replacement.SourceString, replacement.TargetString);
-                        unit.target.state = "translated";
+                        statement = $"{statement.Substring(0, pos)}{replacement.TargetString}{statement.Substring(pos + replacement.SourceString.Length)}";                        
                         replaced = true;
-                        pos = statement.IndexOf(replacement.SourceString);
+                        pos = statement.IndexOf(replacement.SourceString, pos+replacement.TargetString.Length, stringComparisonOption);
                     }
                 }
 
                 if (replaced)
                 {
+                    unit.target.state = "translated";
                     unit.target.Text[0] = statement;
                 }
             }

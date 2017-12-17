@@ -4,6 +4,7 @@
   "inputDirectory": "Example/Input",
   "outputDirectory": "Example/Output",
   "options": {
-    "replaceWholeWord": true
+    "replaceWholeWord": true,
+    "caseSensitive": true
   }
 }

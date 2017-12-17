@@ -20,6 +20,7 @@ namespace XLIFFBatch
             var mapItemDelimiter = Configuration["mapItemDelimiter"];
             var inputDirectory = Configuration["inputDirectory"];
             var outputDirectory = Configuration["outputDirectory"];
+            bool replaceWholeWord = bool.Parse(Configuration["options:replaceWholeWord"]);
 
             Console.WriteLine($"mapfile: {mapfile}");
             Console.WriteLine($"mapItemDelimiter: {mapItemDelimiter}");
@@ -32,6 +33,11 @@ namespace XLIFFBatch
             {
                 Console.WriteLine("Error: one of the input parameters is invalid. Please check settings.json");
             }
+
+            var options = new Options
+            {
+                ReplaceWholeWord = replaceWholeWord
+            };
             
             var workUnits = (new DirectoryInfo(inputDirectory))
                 .GetFiles()
@@ -46,7 +52,7 @@ namespace XLIFFBatch
 
             foreach (var workUnit in FileAccessUtility.ReadXliffFiles(workUnits))
             {
-                if (SearchAndReplace.Process(replacements, workUnit.Xliff.file[0]))
+                if (SearchAndReplace.Process(replacements, workUnit.Xliff.file[0], options))
                 {
                     FileAccessUtility.WriteXllfFile(workUnit);
                 }

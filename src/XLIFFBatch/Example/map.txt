@@ -1,3 +1,4 @@
 ﻿Binary|||バイナリー
 variable||| 変数
 Variable|||変数
+for|||フォー

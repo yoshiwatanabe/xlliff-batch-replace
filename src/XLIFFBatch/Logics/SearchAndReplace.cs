@@ -16,7 +16,7 @@ namespace XLIFFBatch.Logics
             "<code>"
         };
 
-        public static bool Process(IEnumerable<Replacement> replacements, file file)
+        public static bool Process(IEnumerable<Replacement> replacements, file file, Options options)
         {
             bool replaced = false;
 
@@ -35,11 +35,15 @@ namespace XLIFFBatch.Logics
                 
                 foreach (var replacement in replacements)
                 {
-                    if (statement.IndexOf(replacement.SourceString) != -1)
+                    int pos = statement.IndexOf(replacement.SourceString);
+                    while (pos != -1 && 
+                        (options.ReplaceWholeWord && TestWholeWord(replacement.SourceString, pos, statement))
+                        )
                     {
                         statement = statement.Replace(replacement.SourceString, replacement.TargetString);
                         unit.target.state = "translated";
                         replaced = true;
+                        pos = statement.IndexOf(replacement.SourceString);
                     }
                 }
 
@@ -50,6 +54,17 @@ namespace XLIFFBatch.Logics
             }
 
             return replaced;
+        }
+
+        private static bool TestWholeWord(string sourceString, int pos, string statement)
+        {
+            return (pos != 0
+                && char.IsWhiteSpace(statement[pos - 1])
+                && (
+                    pos + sourceString.Length == statement.Length
+                    || 
+                    (pos + sourceString.Length < statement.Length 
+                        && char.IsWhiteSpace(statement[pos + sourceString.Length]))));
         }
     }
 }

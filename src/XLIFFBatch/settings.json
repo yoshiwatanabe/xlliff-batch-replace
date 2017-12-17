@@ -2,5 +2,8 @@
   "mapfile": "Example/map.txt",
   "mapItemDelimiter": "|||",
   "inputDirectory": "Example/Input",
-  "outputDirectory": "Example/Output"
+  "outputDirectory": "Example/Output",
+  "options": {
+    "replaceWholeWord": true
+  }
 }

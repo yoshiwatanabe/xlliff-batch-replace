@@ -8,10 +8,21 @@ Basic menu|||基本（Basic）メニュー
 	‘forever’|||「ずっと（forever）」
 	‘pause (ms)’|||「一時停止（ミリ秒）（pause (ms)）」
 	‘on start’|||「最初だけ（on start）」
+	// single quates
+	'show number'|||「数を表示（show number）」
+	'show leds'|||「LEDに表示（show leds）」
+	'show icon'|||「アイコンを表示（show icon）」
+	'show string'|||「文字列を表示（show string）」
+	'forever'|||「ずっと（forever）」
+	'pause (ms)'|||「一時停止（ミリ秒）（pause (ms)）」
+	'on start'|||「最初だけ（on start）」
 	
 Basic More Toolbox drawer|||基本（Basic）-> さらに表示 メニュー
 	‘clear screen’|||「表示を消す（clear screen）」
 	‘show arrow’|||「矢印を表示（show arrow）」
+	// Single quates
+	'clear screen'|||「表示を消す（clear screen）」
+	'show arrow'|||「矢印を表示（show arrow）」
 	
 Input Toolbox drawer|||入力(Input)メニュー
 Input menu|||入力(Input)メニュー
@@ -24,6 +35,16 @@ Input menu|||入力(Input)メニュー
 	‘light level’|||「明るさ（light level）」
 	‘compass heading’|||「方角（compass heading）」
 	‘temperature’|||「温度（temperature）」
+	// Single quates
+	'on button A pressed'|||「ボタンAが押されたとき（on button A pressed）」
+	'one shake'|||「ゆさぶられたとき（one shake）」
+	'on pin P0 pressed'|||「端子P0がタッチされたとき（on pin P0 pressed）」
+	'button A is pressed'|||「ボタンAが押されている（button A is pressed）」
+	'pin P0'|||「端子P0がタッチされている（pin P0）」
+	'acceleration (mg)'|||「加速度（ミリG）（acceleration (mg)）」
+	'light level'|||「明るさ（light level）」
+	'compass heading'|||「方角（compass heading）」
+	'temperature'|||「温度（temperature）」
 
 
 Input More Toolbox drawer|||入力（Input）-> さらに表示 メニュー
@@ -34,7 +55,14 @@ Input More Toolbox drawer|||入力（Input）-> さらに表示 メニュー
 	‘running time (micros)’|||「経過時間（マイクロ秒）（running time (micros)）」
 	‘on pin P0 released’|||「端子P0がタッチされなくなったとき（on pin P0 released）」
 	‘set accelerometer range 1g’|||「加速度センサーの計測範囲を設定する１G（set accelerometer range 1g）」
-
+	// Single quates
+	'rotation'|||「傾斜（rotation）」
+	'magnetic force'|||「磁力（magnetic force）」
+	'running time (ms)'|||「稼働時間（ミリ秒）（running time (ms)）」
+	'calibrate compass'|||「コンパスを調整する（calibrate compass）」
+	'running time (micros)'|||「経過時間（マイクロ秒）（running time (micros)）」
+	'on pin P0 released'|||「端子P0がタッチされなくなったとき（on pin P0 released）」
+	'set accelerometer range 1g'|||「加速度センサーの計測範囲を設定する１G（set accelerometer range 1g）」
 
 Music Toolbox drawer|||音楽(Music)メニュー
 Music menu|||音楽(Music)メニュー
@@ -48,6 +76,17 @@ Music menu|||音楽(Music)メニュー
 	‘tempo’|||「テンポ（tempo）」
 	‘change tempo by’|||「テンポを増やす（change tempo by）」
 	‘set tempo to’|||「テンポを設定する（set tempo to）」	
+	// Single quates
+	'play tone'|||「音を鳴らす（play tone）」
+	'ring tone'|||「音を鳴らす（Hz)（ring tone）」
+	'rest'|||「休符（ミリ秒）（rest）」
+	'start melody'|||「メロディを開始する（start melody）」
+	'music one'|||「音楽 メロディの音を出した（music one）」
+	'Middle C'|||「真ん中のド（Middle C）」
+	'1 beat'|||「1泊（1 beat）」
+	'tempo'|||「テンポ（tempo）」
+	'change tempo by'|||「テンポを増やす（change tempo by）」
+	'set tempo to'|||「テンポを設定する（set tempo to）」	
 
 Led Toolbox drawer|||LEDメニュー
 Led menu|||LEDメニュー
@@ -56,6 +95,12 @@ Led menu|||LEDメニュー
 	‘toggle x y’|||「反転 x y（toggle x y）」
 	‘point x y’|||「点灯かどうか調べる（point x y）」
 	‘plot bar graph’|||「棒グラフを表示する（plot bar graph）」	
+	// Single quates
+	'plot x y'|||「点灯 x y（plot x y）」
+	'unplot x y'|||「消灯 x y（unplot x y）」
+	'toggle x y'|||「反転 x y（toggle x y）」
+	'point x y'|||「点灯かどうか調べる（point x y）」
+	'plot bar graph'|||「棒グラフを表示する（plot bar graph）」	
 
 Led More Toolbox drawer|||LED -> さらに表示 メニュー
 	‘plot x y brightness’|||「点灯 x y 明るさ（plot x y brightness）」
@@ -63,6 +108,12 @@ Led More Toolbox drawer|||LED -> さらに表示 メニュー
 	‘set brightness’|||「明るさを設定する（set brightness）」
 	‘stop animation’|||「アニメーションを停止（stop animation）」
 	‘led enable’|||「表示をオンまたはオフにする（led enable）」
+	// Single quates
+	'plot x y brightness'|||「点灯 x y 明るさ（plot x y brightness）」
+	'brightness'|||「明るさ（brightness）」
+	'set brightness'|||「明るさを設定する（set brightness）」
+	'stop animation'|||「アニメーションを停止（stop animation）」
+	'led enable'|||「表示をオンまたはオフにする（led enable）」
 
 Radio Toolbox drawer|||無線(Radio)メニュー
 Radio menu|||無線(Radio)メニュー
@@ -73,166 +124,117 @@ Radio menu|||無線(Radio)メニュー
 	‘on radio received name’|||「無線で受信したとき name valiue（on radio received name）」
 	‘on radio received receivedString’|||「無線で受信したとき receivedString（on radio received receivedString）」
 	‘radio set group’|||「無線のグループを設定（radio set group）」	
+	// Single quates
+	'radio send number'|||「無線で数値を送信（radio send number）」
+	'radio send value'|||「無線で送信（radio send value）」
+	'radio send string'|||「無線で文字列を送信（radio send string）」
+	'on radio received receivedNumber'|||「無線で受信したとき receivedNumber（on radio received receivedNumber）」
+	'on radio received name'|||「無線で受信したとき name valiue（on radio received name）」
+	'on radio received receivedString'|||「無線で受信したとき receivedString（on radio received receivedString）」
+	'radio set group'|||「無線のグループを設定（radio set group）」	
 
 Radio More Toolbox drawer|||無線(Radio) -> さらに表示 メニュー
 	‘radio set transmit power’|||「無線の送信強度を設定（radio set transmit power）」
 	‘radio set transmit serial number’|||「シリアル番号の送信の有無を設定（radio set transmit serial number）」
 	‘radio write received packet to serial’|||「無線で最後に受信したパケットをシリアルポートに書き込む（radio write received packet to serial）」
+	// Single quates
+	'radio set transmit power'|||「無線の送信強度を設定（radio set transmit power）」
+	'radio set transmit serial number'|||「シリアル番号の送信の有無を設定（radio set transmit serial number）」
+	'radio write received packet to serial'|||「無線で最後に受信したパケットをシリアルポートに書き込む（radio write received packet to serial）」
 
 Loops Toolbox drawer|||ループ(Loops)メニュー
 Loops menu|||ループ(Loops)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+	‘repeat’|||「くりかえし（repeat）」
+	‘while’|||「もし真ならくりかえし（while）」
+	‘for element value of list’|||「配列の値を変数に入れてくりかえす（for element value of list）」
+	// Single quates
+	'repeat'|||「くりかえし（repeat）」
+	'while'|||「もし真ならくりかえし（while）」
+	'for element value of list'|||「配列の値を変数に入れてくりかえす（for element value of list）」
 
 Logic Toolbox drawer|||論理(Logic)メニュー
-Logic menu|||論理(Logic)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+Logic menu|||論理(Logic)メニュー 
+	'if...then'|||「もし・・なら（if...then）」
+	'if...then...else'|||「もし・・・なら・・・でなければ（if...then...else）」
+	‘less than’|||「<（less than）」
+	'less than' comparison block|||「（less than）」comparison block
+	‘true’|||「真（true）」
+	‘false’|||「偽（false）」
+	‘NOT true’
+	// Single quates
+	'if...then'|||「もし・・なら（if...then）」
+	'if...then...else'|||「もし・・・なら・・・でなければ（if...then...else）」
+	'less than'|||「<（less than）」
+	'less than' comparison block|||「（less than）」comparison block
+	'true'|||「真（true）」
+	'false'|||「偽（false）」
+	'NOT true'
 
 Variables Toolbox drawer|||変数(Variables)メニュー
 Variables menu|||変数(Variables)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+	‘set item’ block|||「変数を・・・にする（set item）」ブロック
+	‘set item block’|||「変数を・・・にする（set item）」ブロック
+	‘set item to’ block|||「変数を・・・にする（set item）」ブロック
+	'set' variable block|||「変数を・・・にする（set item）」ブロック
+	'set' variable blocks|||「変数を・・・にする（set item）」ブロック
+	// Single quates
+	'set item' block|||「変数を・・・にする（set item）」ブロック
+	'set item block'|||「変数を・・・にする（set item）」ブロック
+	'set item to' block|||「変数を・・・にする（set item）」ブロック
+	'set' variable block|||「変数を・・・にする（set item）」ブロック
+	'set' variable blocks|||「変数を・・・にする（set item）」ブロック
+
 
 Math Toolbox drawer|||計算(Math)メニュー
 Math menu|||計算(Math)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+	'pick random'|||「０～４の範囲の乱数（pick random）」
+	'pick random true or false'|||「真または偽をランダムに選ぶ（pick random true or false）」
 
 Math More Toolbox drawer|||計算(Math) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
 
 Advanced menu|||高度なブロック(Advanced)メニュー
 
 Arrays Toolbox drawer|||配列(Arrays)メニュー
 Arrays menu|||配列(Arrays)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+	‘create array with number’|||「この値で配列を作成（create array with number）」
+	‘create array’|||「この値で配列を作成（create array with number）」
+	‘length of’|||「配列の長さ（length of）」
+	// Single quates
+	'create array with number'|||「この値で配列を作成（create array with number）」
+	'create array'|||「この値で配列を作成（create array with number）」
+	'length of'|||「配列の長さ（length of）」
 
 Arrays More Toolbox drawer|||配列(Arrays) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
 
 Text Toolbox drawer|||文字列(Text)メニュー
 Text menu|||文字列(Text)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
 
 Game Toolbox drawer|||ゲーム(Game)メニュー
 Text menu|||ゲーム(Game)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+	‘create sprite’|||「スプライトを作成（create sprite）」
+	‘move by’|||「スプライトを１ドット進める（move by）」
+	‘turn right by’|||「スプライトを方向転換右に（turn right by）」
+	// Single quates
+	'create sprite'|||「スプライトを作成（create sprite）」
+	'move by'|||「スプライトを１ドット進める（move by）」
+	'turn right by'|||「スプライトを方向転換右に（turn right by）」
 
 Game More Toolbox drawer|||ゲーム(Game) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
+	‘pause’|||「一時停止（pause）」
+	‘resume’|||「再開する（resume）」
+	// Single quates
+	'pause'|||「一時停止（pause）」
+	'resume'|||「再開する（resume）」
 
 Pins Toolbox drawer|||入出力端子(Pins)メニュー
 Pins menu|||入出力端子(Pins)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
 Pins More Toolbox drawer|||入出力端子(Pins) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
 Serial Toolbox drawer|||シリアル通信(Serial)メニュー
 Serial menu|||シリアル通信(Serial)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
-
 Serial More Toolbox drawer|||シリアル通信(Serial) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-
 Control Toolbox drawer|||制御(Control)メニュー
 Control menu|||制御(Control)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
 Control More Toolbox drawer|||制御(Control) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
 
 // CS Intro の見出し語等
 	Getting started|||はじめに
@@ -259,6 +261,7 @@ Control More Toolbox drawer|||制御(Control) -> さらに表示 メニュー
 	‘Add Comment’|||「コメントを追加（Add Comment）」
 	blocks|||ブロック
 	a block|||ブロック
+	block|||ブロック
 	radio packets|||無線パケット
 	serial number|||シリアル番号
 
@@ -284,13 +287,18 @@ Control More Toolbox drawer|||制御(Control) -> さらに表示 メニュー
 	mouse button|||マウスボタン
 	an event handler|||イベントハンドラー
 	event handler|||イベントハンドラー
+	event handlers|||イベントハンドラー
 	an event|||イベント
 	event|||イベント
+	events|||イベント
 	the user|||ユーザー
+	the users|||ユーザー
 	user|||ユーザー
+	users|||ユーザー
 
 // イメージ、グラフィックス、ゲーム関連の用語
 	an image|||画像
+	images|||画像
 	the image|||画像
 	the screen|||画面
 	pixel|||ピクセル

@@ -10,37 +10,6 @@ namespace XLIFFBatch
 {
     public class FileAccessUtility
     {
-        public static IEnumerable<Replacement> ReadReplacements(string mapItemDelimiter, string mapItemCommentDelimitter, string mapfilePath)
-        {
-            var result = new List<Replacement>();
-            var delimiters = new string[] { mapItemDelimiter };
-            using (var streamReader = new StreamReader(mapfilePath))
-            {
-                var line = streamReader.ReadLine();
-                while (line != null)
-                {
-                    int commentStart = line.IndexOf(mapItemCommentDelimitter);
-                    if (commentStart != -1)
-                    {
-                        line = line.Substring(0, commentStart);
-                    }
-
-                    if (line.Any())
-                    {
-                        var items = line.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
-                        result.Add(new Replacement
-                        {
-                            SourceString = items[0].Trim(),
-                            TargetString = items[1].Trim()
-                        });
-                    }
-
-                    line = streamReader.ReadLine();
-                }
-            }
-
-            return result;
-        }
 
         public static IEnumerable<WorkUnit> ReadXliffFiles(IEnumerable<WorkUnit> workUnits)
         {
@@ -55,8 +24,15 @@ namespace XLIFFBatch
             }).ToArray();
         }
 
-        public static void WriteXllfFile(WorkUnit workUnit)
+        public static void WriteXliffFile(WorkUnit workUnit, bool autoCreateOutputDirectory = true)
         {
+            var fileInfo = new FileInfo(workUnit.OutputFilePath);
+            if (autoCreateOutputDirectory && !Directory.Exists(fileInfo.DirectoryName))
+            {
+                Directory.CreateDirectory(fileInfo.DirectoryName);
+                File.Create(workUnit.OutputFilePath).Dispose();
+            }
+
             using (var streamWriter = new StreamWriter(workUnit.OutputFilePath))
             {
                 var serializer = new XmlSerializer(typeof(xliff));

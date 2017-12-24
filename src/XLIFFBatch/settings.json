@@ -7,6 +7,7 @@
   "options": {
     "replaceWholeWord": true,
     "caseSensitive": false,
-    "processLongerLengthFirst": true
+    "processLongerLengthFirst": true,
+    "autoCreateOutputDirectories":  true
   }
 }

@@ -10,7 +10,7 @@ namespace XLIFFBatch
 {
     public class FileAccessUtility
     {
-        public static IEnumerable<Replacement> ReadReplacements(string mapItemDelimiter, string mapfilePath)
+        public static IEnumerable<Replacement> ReadReplacements(string mapItemDelimiter, string mapItemCommentDelimitter, string mapfilePath)
         {
             var result = new List<Replacement>();
             var delimiters = new string[] { mapItemDelimiter };
@@ -18,13 +18,22 @@ namespace XLIFFBatch
             {
                 var line = streamReader.ReadLine();
                 while (line != null)
-                {                    
-                    var items = line.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
-                    result.Add(new Replacement
+                {
+                    int commentStart = line.IndexOf(mapItemCommentDelimitter);
+                    if (commentStart != -1)
                     {
-                        SourceString = items[0].Trim(),
-                        TargetString = items[1].Trim()
-                    });
+                        line = line.Substring(0, commentStart);
+                    }
+
+                    if (line.Any())
+                    {
+                        var items = line.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+                        result.Add(new Replacement
+                        {
+                            SourceString = items[0].Trim(),
+                            TargetString = items[1].Trim()
+                        });
+                    }
 
                     line = streamReader.ReadLine();
                 }

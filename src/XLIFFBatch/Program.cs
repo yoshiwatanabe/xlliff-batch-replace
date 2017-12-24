@@ -18,15 +18,19 @@ namespace XLIFFBatch
 
             var mapfile = Configuration["mapfile"];
             var mapItemDelimiter = Configuration["mapItemDelimiter"];
+            var mapItemCommentDelimitter = Configuration["mapItemCommentDelimitter"];            
             var inputDirectory = Configuration["inputDirectory"];
             var outputDirectory = Configuration["outputDirectory"];
-            bool replaceWholeWord = bool.Parse(Configuration["options:replaceWholeWord"]);
+            bool replaceWholeWord = bool.Parse(Configuration["options:replaceWholeWord"]);            
             bool caseSensitive = bool.Parse(Configuration["options:caseSensitive"]);
+            bool processLongerLengthFirst = bool.Parse(Configuration["options:processLongerLengthFirst"]);
 
             Console.WriteLine($"mapfile: {mapfile}");
             Console.WriteLine($"mapItemDelimiter: {mapItemDelimiter}");
+            Console.WriteLine($"mapItemCommentDelimitter: {mapItemCommentDelimitter}");            
             Console.WriteLine($"inputDirectory: {inputDirectory}");
             Console.WriteLine($"outputDirectory: {outputDirectory}");
+            Console.WriteLine($"processLongerLengthFirst: {processLongerLengthFirst}");
 
             if (!File.Exists(mapfile) ||
                 !Directory.Exists(inputDirectory) ||
@@ -50,7 +54,13 @@ namespace XLIFFBatch
                 OutputFilePath = Path.Combine(Path.Combine(Directory.GetCurrentDirectory(), outputDirectory), t.Item2),
             });
 
-            var replacements = FileAccessUtility.ReadReplacements(mapItemDelimiter, Path.Combine(Directory.GetCurrentDirectory(), mapfile));
+            var replacements = FileAccessUtility.ReadReplacements(mapItemDelimiter, mapItemCommentDelimitter, Path.Combine(Directory.GetCurrentDirectory(), mapfile));
+
+            if (processLongerLengthFirst)
+            {
+                // This causes search & replace "For Example" before "For", if these two search strings are in the map.
+                replacements = replacements.OrderByDescending(_ => _.SourceString.Length).ToList();
+            }
 
             foreach (var workUnit in FileAccessUtility.ReadXliffFiles(workUnits))
             {

@@ -1,10 +1,12 @@
 ﻿{
   "mapfile": "Example/map.txt",
   "mapItemDelimiter": "|||",
+  "mapItemCommentDelimitter": "//",  
   "inputDirectory": "Example/Input",
   "outputDirectory": "Example/Output",
   "options": {
     "replaceWholeWord": true,
-    "caseSensitive": true
+    "caseSensitive": false,
+    "processLongerLengthFirst": true
   }
 }

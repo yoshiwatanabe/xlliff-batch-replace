@@ -1,6 +1,7 @@
 ﻿// This is a test
 Basic Toolbox drawer|||基本（Basic）メニュー  // This should work too
 Basic menu|||基本（Basic）メニュー
+Basic block menu|||基本（Basic）メニュー
 	‘show number’|||「数を表示（show number）」
 	‘show leds’|||「LEDに表示（show leds）」
 	‘show icon’|||「アイコンを表示（show icon）」
@@ -30,6 +31,7 @@ Basic More Toolbox drawer|||基本（Basic）-> さらに表示 メニュー
 	
 Input Toolbox drawer|||入力(Input)メニュー
 Input menu|||入力(Input)メニュー
+Input block menu|||入力(Input)メニュー
 	‘on button A pressed’|||「ボタンAが押されたとき（on button A pressed）」
 	‘one shake’|||「ゆさぶられたとき（one shake）」
 	‘on pin P0 pressed’|||「端子P0がタッチされたとき（on pin P0 pressed）」
@@ -73,6 +75,7 @@ Input More Toolbox drawer|||入力（Input）-> さらに表示 メニュー
 
 Music Toolbox drawer|||音楽(Music)メニュー
 Music menu|||音楽(Music)メニュー
+Music block menu|||音楽(Music)メニュー
 	‘play tone’|||「音を鳴らす（play tone）」
 	‘ring tone’|||「音を鳴らす（Hz)（ring tone）」
 	‘rest’|||「休符（ミリ秒）（rest）」
@@ -101,6 +104,7 @@ Music menu|||音楽(Music)メニュー
 
 Led Toolbox drawer|||LEDメニュー
 Led menu|||LEDメニュー
+Led block menu|||LEDメニュー
 	‘plot x y’|||「点灯 x y（plot x y）」
 	‘unplot x y’|||「消灯 x y（unplot x y）」
 	‘toggle x y’|||「反転 x y（toggle x y）」
@@ -132,6 +136,7 @@ Led More Toolbox drawer|||LED -> さらに表示 メニュー
 
 Radio Toolbox drawer|||無線(Radio)メニュー
 Radio menu|||無線(Radio)メニュー
+Radio block menu|||無線(Radio)メニュー
 	‘radio send number’|||「無線で数値を送信（radio send number）」
 	‘radio send value’|||「無線で送信（radio send value）」
 	‘radio send string’|||「無線で文字列を送信（radio send string）」
@@ -163,6 +168,7 @@ Radio More Toolbox drawer|||無線(Radio) -> さらに表示 メニュー
 
 Loops Toolbox drawer|||ループ(Loops)メニュー
 Loops menu|||ループ(Loops)メニュー
+Loops block menu|||ループ(Loops)メニュー
 	‘repeat’|||「くりかえし（repeat）」
 	‘while’|||「もし真ならくりかえし（while）」
 	‘for element value of list’|||「配列の値を変数に入れてくりかえす（for element value of list）」
@@ -180,6 +186,7 @@ Loops menu|||ループ(Loops)メニュー
 
 Logic Toolbox drawer|||論理(Logic)メニュー
 Logic menu|||論理(Logic)メニュー 
+Logic block menu|||論理(Logic)メニュー 
 	'if...then'|||「もし・・なら（if...then）」
 	'if...then...else'|||「もし・・・なら・・・でなければ（if...then...else）」
 	‘less than’|||「<（less than）」
@@ -203,6 +210,7 @@ Logic menu|||論理(Logic)メニュー
 
 Variables Toolbox drawer|||変数(Variables)メニュー
 Variables menu|||変数(Variables)メニュー
+Variables block menu|||変数(Variables)メニュー
 	‘set item’ block|||「変数を・・・にする（set item）」ブロック
 	‘set item block’|||「変数を・・・にする（set item）」ブロック
 	‘set item to’ block|||「変数を・・・にする（set item）」ブロック
@@ -224,6 +232,7 @@ Variables menu|||変数(Variables)メニュー
 
 Math Toolbox drawer|||計算(Math)メニュー
 Math menu|||計算(Math)メニュー
+Math block menu|||計算(Math)メニュー
 	'pick random'|||「０～４の範囲の乱数（pick random）」
 	'pick random true or false'|||「真または偽をランダムに選ぶ（pick random true or false）」
 	Math blocks|||計算ブロック
@@ -234,9 +243,12 @@ Math menu|||計算(Math)メニュー
 Math More Toolbox drawer|||計算(Math) -> さらに表示 メニュー
 
 Advanced menu|||高度なブロック(Advanced)メニュー
+Advanced tool menu|||高度なブロック(Advanced)メニュー
+Advanced Toolbox menu|||高度なブロック(Advanced)メニュー
 
 Arrays Toolbox drawer|||配列(Arrays)メニュー
 Arrays menu|||配列(Arrays)メニュー
+Arrays block menu|||配列(Arrays)メニュー
 	‘create array with number’|||「この値で配列を作成（create array with number）」
 	‘create array’|||「この値で配列を作成（create array with number）」
 	‘length of’|||「配列の長さ（length of）」
@@ -254,10 +266,12 @@ Arrays More Toolbox drawer|||配列(Arrays) -> さらに表示 メニュー
 
 Text Toolbox drawer|||文字列(Text)メニュー
 Text menu|||文字列(Text)メニュー
+Text block menu|||文字列(Text)メニュー
 	'join' block|||「文字列をつなげる」ブロック
 
 Game Toolbox drawer|||ゲーム(Game)メニュー
-Text menu|||ゲーム(Game)メニュー
+Game menu|||ゲーム(Game)メニュー
+Game block menu|||ゲーム(Game)メニュー
 	‘create sprite’|||「スプライトを作成（create sprite）」
 	‘move by’|||「スプライトを１ドット進める（move by）」
 	‘turn right by’|||「スプライトを方向転換右に（turn right by）」
@@ -295,8 +309,8 @@ Control More Toolbox drawer|||制御(Control) -> さらに表示 メニュー
 	Unplugged activity:|||アンプラグド アクティビティ
 	Unplugged Activity:|||アンプラグド アクティビティ
 	Activity|||アクティビティ
-	Project:|||プロジェクト
-	Introduction:|||はじめに
+	Project:|||プロジェクト:
+	Introduction:|||はじめに:
 	the hardware|||ハードウェア
 	Notes:|||追加情報：
 
@@ -447,3 +461,47 @@ CT.L1:6-02 Develop a simple understanding of an algorithm using computer-free ex
 2-A-5-7 Create variables that represent different types of data and manipulate their values.|||2-A-5-7 異なるデータ型の変数を設定し、その値を操作できる
 CL.L2-05 Implement problem solutions using a programming language, including: looping behavior, conditional statements logic, expressions, variables, and functions.|||CL.L2-05 ループ、条件文付きのロジック、式、変数、および関数などを使用し、プログラミング言語で問題解決を実装する
 2-A-6-10 Use an iterative design process (e.g., define the problem, generate ideas, build, test, and improve solutions) to solve problems, both independently and collaboratively.|||<target>2-A-6-10 問題解決を行うために個人、もしくはグループでデザインプロセス（問題の定義、アイデアの提案、テスト、ソリューションの改善）を活用できる
+
+
+
+//
+Collaboration reflection|||共同作業と自己省察
+共同作業と内省|||共同作業と自己省察
+Reflection piece includes:|||自己省察の項目：
+ふりかえりに必要なすべての要素が含まれている|||自己省察の項目
+Reflection piece lacks 1 of the required elements.|||１つの項目が満たされていない。
+Reflection piece lacks 2 of the required elements.|||２つの項目が満たされていない。
+Reflection piece lacks 3 of the required elements.|||３つの項目が満たされていない。
+
+micro:bit program lacks 1 of the required elements.|||micro:bit プラグラムから１つの必要な要素が欠けている。
+micro:bit program lacks 1 of the required element.|||micro:bit プラグラムから１つの必要な要素が欠けている。
+micro:bit program lacks 2 of the required elements.|||micro:bit プラグラムから２つの必要な要素が欠けている。
+micro:bit program lacks 3 or more of the required elements.||| micro:bit プラグラムから３つまたはより多くの必要な要素が欠けている。
+micro:bit program lacks all of the required elements.||| micro:bit プラグラムからすべての必要な要素が欠けている。
+
+Have students write a reflection of about 150–300 words, addressing the following points|||>生徒たちに以下の内容を含む１５０～３００字程度のレビューを書いてもらいましょう。
+
+Uses variables in a way that is integral to the program|||変数をプログラムに不可欠な方法で使用している
+Uses mathematical operations to add, subtract, multiply, and/or divide variables|||変数を加算、減算、乗算、ならびに/または徐算するために数値演算を使用している
+Compiles and runs as intended|||目的通りにコンパイル、実行している
+Meaningful comments in code|||コードの中に意味のあるコメントがある
+Remind the students of all the different inputs available to them through the micro:bit.|||生徒たちにmicro:bitで利用可能な入力を全て説明します。
+
+Competency scores|||評価基準
+What feedback did your beta testers give you?|||ベータテスターからどのようなフィードバックを得ましたか？
+How did that help you improve your design?|||どのようにデザインの改善に役に立ちましたか？
+Describe a difficult point in the process of designing this program, and explain how you resolved it.|||このプログラムを設計する過程で難しかったことは何ですか？ どのようにしてその問題を解決したか説明しましょう。
+What was something that was surprising to you about the process of creating this program?|||このプログラムを作成する過程でなにか驚いたことはありますか？
+Describe something in your project that you are proud of.|||このプロジェクトであなたが一番満足していることは何ですか？
+
+
+// activity.xliff
+the blue gear-wheel icon||青いギアのアイコン
+the top left corner|||左上隅
+Player A’s score|||プレイヤーAの得点
+Player B’s score|||プレイヤーAの得点
+Player A|||プレイヤーA
+Player B|||プライヤーB
+Lesson objectives|||このレッスンの目標
+Students will...|||生徒は以下のことを学ぶことができます。
+Lesson structure|||学習の進め方

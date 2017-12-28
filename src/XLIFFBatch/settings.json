@@ -9,6 +9,6 @@
     "caseSensitive": false,
     "processLongerLengthFirst": true,
     "autoCreateOutputDirectories": true,
-    "inputSearchPattern": "standards*"
+    "inputSearchPattern": "*"
   }
 }

@@ -21,7 +21,7 @@ namespace XLIFFBatch.Logics
         {
             bool replaced = false;
 
-            Console.WriteLine("Process file unit started...");
+            Console.WriteLine("\nProcess file unit started...");
 
             StringComparison stringComparisonOption = options.CaseSensitive ?
                 StringComparison.InvariantCulture :
@@ -33,10 +33,10 @@ namespace XLIFFBatch.Logics
 
                 var statement = unit.target.Text[0];
 
-                if (SkipLineHints.Any(_ => statement.IndexOf(_) != -1))
-                {
-                    continue;
-                }
+                //if (SkipLineHints.Any(_ => statement.IndexOf(_) != -1))
+                //{
+                //    continue;
+                //}
 
                 foreach (var replacement in replacements)
                 {
@@ -73,7 +73,11 @@ namespace XLIFFBatch.Logics
                     ||
                     (pos + sourceString.Length < statement.Length
                         && (char.IsWhiteSpace(statement[pos + sourceString.Length]) ||
-                            char.IsPunctuation(statement[pos + sourceString.Length])) )));
+                            char.IsPunctuation(statement[pos + sourceString.Length]) ||
+                            char.IsControl(statement[pos + sourceString.Length]) ||
+                            statement[pos + sourceString.Length] == '<' ||// HTML bracked
+                            statement[pos + sourceString.Length] == '&'
+                            )  )));
         }
 
         private static bool IsEnclosedInPair(string sourceString, int pos, string statement, char[] pairCharacters)

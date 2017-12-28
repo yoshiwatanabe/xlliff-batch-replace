@@ -1,12 +1,14 @@
 ﻿{
   "mapfile": "Example/map.txt",
   "mapItemDelimiter": "|||",
-  "mapItemCommentDelimitter": "//",  
-  "inputDirectory": "Example/Input",
-  "outputDirectory": "Example/Output",
+  "mapItemCommentDelimitter": "//",
+  "inputDirectory": "C:\\repos\\github-layzlabo\\makecode-csintro\\Japanese-src",
+  "outputDirectory": "C:\\repos\\github-layzlabo\\makecode-csintro\\Japanese-out",
   "options": {
     "replaceWholeWord": true,
     "caseSensitive": false,
-    "processLongerLengthFirst": true
+    "processLongerLengthFirst": true,
+    "autoCreateOutputDirectories": true,
+    "inputSearchPattern": "*"
   }
 }

@@ -1569,7 +1569,9 @@ namespace XLIFFBatch.Schema {
             this.sizeunitField = "pixel";
             this.mergedtransField = AttrType_YesNo.yes;
         }
-        
+
+
+        [System.Xml.Serialization.XmlElementAttribute("source")]
         /// <remarks/>
         public source source {
             get {
@@ -1590,7 +1592,8 @@ namespace XLIFFBatch.Schema {
                 this.segsourceField = value;
             }
         }
-        
+
+        [System.Xml.Serialization.XmlElementAttribute("target")]
         /// <remarks/>
         public target target {
             get {

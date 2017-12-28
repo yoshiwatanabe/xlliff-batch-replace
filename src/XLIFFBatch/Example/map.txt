@@ -1,6 +1,7 @@
 ﻿// This is a test
 Basic Toolbox drawer|||基本（Basic）メニュー  // This should work too
 Basic menu|||基本（Basic）メニュー
+Basic block menu|||基本（Basic）メニュー
 	‘show number’|||「数を表示（show number）」
 	‘show leds’|||「LEDに表示（show leds）」
 	‘show icon’|||「アイコンを表示（show icon）」
@@ -8,13 +9,29 @@ Basic menu|||基本（Basic）メニュー
 	‘forever’|||「ずっと（forever）」
 	‘pause (ms)’|||「一時停止（ミリ秒）（pause (ms)）」
 	‘on start’|||「最初だけ（on start）」
+	// single quates
+	'show number'|||「数を表示（show number）」
+	'show leds'|||「LEDに表示（show leds）」
+	'show icon'|||「アイコンを表示（show icon）」
+	'show string'|||「文字列を表示（show string）」
+	'forever'|||「ずっと（forever）」
+	'pause (ms)'|||「一時停止（ミリ秒）（pause (ms)）」
+	'on start'|||「最初だけ（on start）」
+	Basic blocks|||基本ブロック
+	the Basic block|||基本ブロック
+	a Basic block|||基本ブロック
+	Basic block|||基本ブロック
 	
 Basic More Toolbox drawer|||基本（Basic）-> さらに表示 メニュー
 	‘clear screen’|||「表示を消す（clear screen）」
 	‘show arrow’|||「矢印を表示（show arrow）」
+	// Single quates
+	'clear screen'|||「表示を消す（clear screen）」
+	'show arrow'|||「矢印を表示（show arrow）」
 	
 Input Toolbox drawer|||入力(Input)メニュー
 Input menu|||入力(Input)メニュー
+Input block menu|||入力(Input)メニュー
 	‘on button A pressed’|||「ボタンAが押されたとき（on button A pressed）」
 	‘one shake’|||「ゆさぶられたとき（one shake）」
 	‘on pin P0 pressed’|||「端子P0がタッチされたとき（on pin P0 pressed）」
@@ -24,7 +41,20 @@ Input menu|||入力(Input)メニュー
 	‘light level’|||「明るさ（light level）」
 	‘compass heading’|||「方角（compass heading）」
 	‘temperature’|||「温度（temperature）」
-
+	// Single quates
+	'on button A pressed'|||「ボタンAが押されたとき（on button A pressed）」
+	'one shake'|||「ゆさぶられたとき（one shake）」
+	'on pin P0 pressed'|||「端子P0がタッチされたとき（on pin P0 pressed）」
+	'button A is pressed'|||「ボタンAが押されている（button A is pressed）」
+	'pin P0'|||「端子P0がタッチされている（pin P0）」
+	'acceleration (mg)'|||「加速度（ミリG）（acceleration (mg)）」
+	'light level'|||「明るさ（light level）」
+	'compass heading'|||「方角（compass heading）」
+	'temperature'|||「温度（temperature）」
+	Input blocks|||入力ブロック
+	the Input block|||入力ブロック
+	an Input block|||入力ブロック
+	Input block|||入力ブロック
 
 Input More Toolbox drawer|||入力（Input）-> さらに表示 メニュー
 	‘rotation’|||「傾斜（rotation）」
@@ -34,10 +64,18 @@ Input More Toolbox drawer|||入力（Input）-> さらに表示 メニュー
 	‘running time (micros)’|||「経過時間（マイクロ秒）（running time (micros)）」
 	‘on pin P0 released’|||「端子P0がタッチされなくなったとき（on pin P0 released）」
 	‘set accelerometer range 1g’|||「加速度センサーの計測範囲を設定する１G（set accelerometer range 1g）」
-
+	// Single quates
+	'rotation'|||「傾斜（rotation）」
+	'magnetic force'|||「磁力（magnetic force）」
+	'running time (ms)'|||「稼働時間（ミリ秒）（running time (ms)）」
+	'calibrate compass'|||「コンパスを調整する（calibrate compass）」
+	'running time (micros)'|||「経過時間（マイクロ秒）（running time (micros)）」
+	'on pin P0 released'|||「端子P0がタッチされなくなったとき（on pin P0 released）」
+	'set accelerometer range 1g'|||「加速度センサーの計測範囲を設定する１G（set accelerometer range 1g）」
 
 Music Toolbox drawer|||音楽(Music)メニュー
 Music menu|||音楽(Music)メニュー
+Music block menu|||音楽(Music)メニュー
 	‘play tone’|||「音を鳴らす（play tone）」
 	‘ring tone’|||「音を鳴らす（Hz)（ring tone）」
 	‘rest’|||「休符（ミリ秒）（rest）」
@@ -48,14 +86,40 @@ Music menu|||音楽(Music)メニュー
 	‘tempo’|||「テンポ（tempo）」
 	‘change tempo by’|||「テンポを増やす（change tempo by）」
 	‘set tempo to’|||「テンポを設定する（set tempo to）」	
+	// Single quates
+	'play tone'|||「音を鳴らす（play tone）」
+	'ring tone'|||「音を鳴らす（Hz)（ring tone）」
+	'rest'|||「休符（ミリ秒）（rest）」
+	'start melody'|||「メロディを開始する（start melody）」
+	'music one'|||「音楽 メロディの音を出した（music one）」
+	'Middle C'|||「真ん中のド（Middle C）」
+	'1 beat'|||「1泊（1 beat）」
+	'tempo'|||「テンポ（tempo）」
+	'change tempo by'|||「テンポを増やす（change tempo by）」
+	'set tempo to'|||「テンポを設定する（set tempo to）」	
+	Music blocks|||音楽ブロック
+	the Music block|||音楽ブロック
+	a Music block|||音楽ブロック
+	Music block|||音楽ブロック
 
 Led Toolbox drawer|||LEDメニュー
 Led menu|||LEDメニュー
+Led block menu|||LEDメニュー
 	‘plot x y’|||「点灯 x y（plot x y）」
 	‘unplot x y’|||「消灯 x y（unplot x y）」
 	‘toggle x y’|||「反転 x y（toggle x y）」
 	‘point x y’|||「点灯かどうか調べる（point x y）」
 	‘plot bar graph’|||「棒グラフを表示する（plot bar graph）」	
+	// Single quates
+	'plot x y'|||「点灯 x y（plot x y）」
+	'unplot x y'|||「消灯 x y（unplot x y）」
+	'toggle x y'|||「反転 x y（toggle x y）」
+	'point x y'|||「点灯かどうか調べる（point x y）」
+	'plot bar graph'|||「棒グラフを表示する（plot bar graph）」	
+	Led blocks|||LEDブロック
+	the Led block|||LEDブロック
+	a Led block|||LEDブロック
+	Led block|||LEDブロック
 
 Led More Toolbox drawer|||LED -> さらに表示 メニュー
 	‘plot x y brightness’|||「点灯 x y 明るさ（plot x y brightness）」
@@ -63,9 +127,16 @@ Led More Toolbox drawer|||LED -> さらに表示 メニュー
 	‘set brightness’|||「明るさを設定する（set brightness）」
 	‘stop animation’|||「アニメーションを停止（stop animation）」
 	‘led enable’|||「表示をオンまたはオフにする（led enable）」
+	// Single quates
+	'plot x y brightness'|||「点灯 x y 明るさ（plot x y brightness）」
+	'brightness'|||「明るさ（brightness）」
+	'set brightness'|||「明るさを設定する（set brightness）」
+	'stop animation'|||「アニメーションを停止（stop animation）」
+	'led enable'|||「表示をオンまたはオフにする（led enable）」
 
 Radio Toolbox drawer|||無線(Radio)メニュー
 Radio menu|||無線(Radio)メニュー
+Radio block menu|||無線(Radio)メニュー
 	‘radio send number’|||「無線で数値を送信（radio send number）」
 	‘radio send value’|||「無線で送信（radio send value）」
 	‘radio send string’|||「無線で文字列を送信（radio send string）」
@@ -73,226 +144,364 @@ Radio menu|||無線(Radio)メニュー
 	‘on radio received name’|||「無線で受信したとき name valiue（on radio received name）」
 	‘on radio received receivedString’|||「無線で受信したとき receivedString（on radio received receivedString）」
 	‘radio set group’|||「無線のグループを設定（radio set group）」	
+	// Single quates
+	'radio send number'|||「無線で数値を送信（radio send number）」
+	'radio send value'|||「無線で送信（radio send value）」
+	'radio send string'|||「無線で文字列を送信（radio send string）」
+	'on radio received receivedNumber'|||「無線で受信したとき receivedNumber（on radio received receivedNumber）」
+	'on radio received name'|||「無線で受信したとき name valiue（on radio received name）」
+	'on radio received receivedString'|||「無線で受信したとき receivedString（on radio received receivedString）」
+	'radio set group'|||「無線のグループを設定（radio set group）」	
+	Radio blocks|||無線ブロック
+	the Radio block|||無線ブロック
+	a Radio block|||無線ブロック
+	Radio block|||無線ブロック
 
 Radio More Toolbox drawer|||無線(Radio) -> さらに表示 メニュー
 	‘radio set transmit power’|||「無線の送信強度を設定（radio set transmit power）」
 	‘radio set transmit serial number’|||「シリアル番号の送信の有無を設定（radio set transmit serial number）」
 	‘radio write received packet to serial’|||「無線で最後に受信したパケットをシリアルポートに書き込む（radio write received packet to serial）」
+	// Single quates
+	'radio set transmit power'|||「無線の送信強度を設定（radio set transmit power）」
+	'radio set transmit serial number'|||「シリアル番号の送信の有無を設定（radio set transmit serial number）」
+	'radio write received packet to serial'|||「無線で最後に受信したパケットをシリアルポートに書き込む（radio write received packet to serial）」
 
 Loops Toolbox drawer|||ループ(Loops)メニュー
 Loops menu|||ループ(Loops)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+Loops block menu|||ループ(Loops)メニュー
+	‘repeat’|||「くりかえし（repeat）」
+	‘while’|||「もし真ならくりかえし（while）」
+	‘for element value of list’|||「配列の値を変数に入れてくりかえす（for element value of list）」
+	// Single quates
+	'repeat'|||「くりかえし（repeat）」
+	'while'|||「もし真ならくりかえし（while）」
+	'for element value of list'|||「配列の値を変数に入れてくりかえす（for element value of list）」
+	Loops blocks|||ループ ブロック
+	the Loops block|||ループ ブロック
+	a Loops block|||ループ ブロック
+	Loop blocks|||ループ ブロック
+	the Loop block|||ループ ブロック
+	a Loop block|||ループ ブロック
+	Loop block|||ループ ブロック
 
 Logic Toolbox drawer|||論理(Logic)メニュー
-Logic menu|||論理(Logic)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+Logic menu|||論理(Logic)メニュー 
+Logic block menu|||論理(Logic)メニュー 
+	'if...then'|||「もし・・なら（if...then）」
+	'if...then...else'|||「もし・・・なら・・・でなければ（if...then...else）」
+	‘less than’|||「<（less than）」
+	'less than' comparison block|||「（less than）」comparison block
+	‘true’|||「真（true）」
+	‘false’|||「偽（false）」
+	‘NOT true’
+	// Single quates
+	'if...then'|||「もし・・なら（if...then）」
+	'if…then'|||「もし・・なら（if...then）」
+	'if...then...else'|||「もし・・・なら・・・でなければ（if...then...else）」
+	'less than'|||「<（less than）」
+	'less than' comparison block|||「（less than）」comparison block
+	'true'|||「真（true）」
+	'false'|||「偽（false）」
+	'NOT true'
+	Logic blocks|||論理ブロック
+	the Logic block|||論理ブロック
+	a Logic block|||論理ブロック
+	Logic block|||論理ブロック
 
 Variables Toolbox drawer|||変数(Variables)メニュー
 Variables menu|||変数(Variables)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+Variables block menu|||変数(Variables)メニュー
+	‘set item’ block|||「変数を・・・にする（set item）」ブロック
+	‘set item block’|||「変数を・・・にする（set item）」ブロック
+	‘set item to’ block|||「変数を・・・にする（set item）」ブロック
+	'set' variable block|||「変数を・・・にする（set item）」ブロック
+	'set' variable blocks|||「変数を・・・にする（set item）」ブロック
+	// Single quates
+	'set item' block|||「変数を・・・にする（set item）」ブロック
+	'set item block'|||「変数を・・・にする（set item）」ブロック
+	'set item to' block|||「変数を・・・にする（set item）」ブロック
+	'set' variable block|||「変数を・・・にする（set item）」ブロック
+	'set' variable blocks|||「変数を・・・にする（set item）」ブロック
+	Variables blocks|||変数ブロック
+	the Variables block|||変数ブロック
+	the Variable block|||変数ブロック
+	a Variables block|||変数ブロック
+	a Variable block|||変数ブロック
+	Variable block|||変数ブロック
+
 
 Math Toolbox drawer|||計算(Math)メニュー
 Math menu|||計算(Math)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+Math block menu|||計算(Math)メニュー
+	'pick random'|||「０～４の範囲の乱数（pick random）」
+	'pick random true or false'|||「真または偽をランダムに選ぶ（pick random true or false）」
+	Math blocks|||計算ブロック
+	the Math block|||計算ブロック
+	a Math block|||計算ブロック
+	Math block|||計算ブロック
 
 Math More Toolbox drawer|||計算(Math) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
 
 Advanced menu|||高度なブロック(Advanced)メニュー
+Advanced tool menu|||高度なブロック(Advanced)メニュー
+Advanced Toolbox menu|||高度なブロック(Advanced)メニュー
 
 Arrays Toolbox drawer|||配列(Arrays)メニュー
 Arrays menu|||配列(Arrays)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+Arrays block menu|||配列(Arrays)メニュー
+	‘create array with number’|||「この値で配列を作成（create array with number）」
+	‘create array’|||「この値で配列を作成（create array with number）」
+	‘length of’|||「配列の長さ（length of）」
+	// Single quates
+	'create array with number'|||「この値で配列を作成（create array with number）」
+	'create array'|||「この値で配列を作成（create array with number）」
+	'length of'|||「配列の長さ（length of）」
+	Array blocks|||配列ブロック
+	Arrays blocks|||配列ブロック
+	an Array block|||配列ブロック
+	the an Array block|||配列ブロック
+	Array block|||配列ブロック
 
 Arrays More Toolbox drawer|||配列(Arrays) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
 
 Text Toolbox drawer|||文字列(Text)メニュー
 Text menu|||文字列(Text)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+Text block menu|||文字列(Text)メニュー
+	'join' block|||「文字列をつなげる」ブロック
 
 Game Toolbox drawer|||ゲーム(Game)メニュー
-Text menu|||ゲーム(Game)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
+Game menu|||ゲーム(Game)メニュー
+Game block menu|||ゲーム(Game)メニュー
+	‘create sprite’|||「スプライトを作成（create sprite）」
+	‘move by’|||「スプライトを１ドット進める（move by）」
+	‘turn right by’|||「スプライトを方向転換右に（turn right by）」
+	// Single quates
+	'create sprite'|||「スプライトを作成（create sprite）」
+	'move by'|||「スプライトを１ドット進める（move by）」
+	'turn right by'|||「スプライトを方向転換右に（turn right by）」
+	Game blocks|||ゲーム ブロック
+	the Game block|||ゲーム ブロック
+	a Game block|||ゲーム ブロック
+	Game block|||ゲーム ブロック
 
 Game More Toolbox drawer|||ゲーム(Game) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
+	‘pause’|||「一時停止（pause）」
+	‘resume’|||「再開する（resume）」
+	// Single quates
+	'pause'|||「一時停止（pause）」
+	'resume'|||「再開する（resume）」
 
 Pins Toolbox drawer|||入出力端子(Pins)メニュー
 Pins menu|||入出力端子(Pins)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
 Pins More Toolbox drawer|||入出力端子(Pins) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
 Serial Toolbox drawer|||シリアル通信(Serial)メニュー
 Serial menu|||シリアル通信(Serial)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
-
 Serial More Toolbox drawer|||シリアル通信(Serial) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-
 Control Toolbox drawer|||制御(Control)メニュー
 Control menu|||制御(Control)メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-
 Control More Toolbox drawer|||制御(Control) -> さらに表示 メニュー
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
-	‘’|||「（）」
 
-
+// ---------------------------------------------------------------------------------------------------------------
 // CS Intro の見出し語等
 	Getting started|||はじめに
-	overview|||概要
-	Unplugged|||アンプラグド
+//	overview|||概要
+	Unplugged activity|||アンプラグド アクティビティ
+	Unplugged activity:|||アンプラグド アクティビティ
+	Unplugged Activity:|||アンプラグド アクティビティ
 	Activity|||アクティビティ
-	Project|||プロジェクト
-	Introduction|||はじめに
-	Hardware|||ハードウェア
+	Project:|||プロジェクト:
+	Introduction:|||はじめに:
+	the hardware|||ハードウェア
 	Notes:|||追加情報：
 
+	Project teams|||プロジェクト チーム
+	Projects folder|||プロジェクト フォルダー
+
 // micro:bit ハードウェア関連
+	button A+B|||AボタンとBボタン
 	button A|||Aボタン
+	the A button|||Aボタン
 	button B|||Bボタン
+	the B button|||Bボタン
 
 // MakeCode IDEエリア名、メニュー、コマンド関連の用語
-	menu|||メニュー
-	the coding workspace|||コーディング ワークスペース
-	coding workspace|||コーディング ワークスペース
-	the workspace|||ワークスペース
-	simulator|||シミュレーター
-	Download button|||ダウンロード ボタン
 	drop-down menu|||ドロップダウン メニュー
+//	menu|||メニュー
+	the coding workspace|||コーディング ワークスペース
+	your coding workspace|||コーディング ワークスペース
+	coding workspace|||コーディング ワークスペース
+	your programming workspace|||プログラミング ワークスペース
+	the programming workspace|||プログラミング ワークスペース
+	programming workspace|||プログラミング ワークスペース
+	the workspace|||ワークスペース
+	the micro:bit simulator|||micro:bit シミュレーター
+	the simulator|||シミュレーター
+	the Download button|||ダウンロード ボタン
+	Download button|||ダウンロード ボタン
+	
 	‘Add Comment’|||「コメントを追加（Add Comment）」
-	blocks|||ブロック
+	the blocks|||ブロック
 	a block|||ブロック
+//	block|||ブロック
 	radio packets|||無線パケット
 	serial number|||シリアル番号
 
 // コンピュータ・サイエンスの概念関連のことば
-	input|||入力
-	output|||出力
-	binary|||バイナリー
-	Variable|||変数
-	string|||文字列
+	the input|||入力
+	other inputs|||ほかの入力
+	different inputs|||ちがう入力
+//	inputs|||入力
+	different outputs|||ちがう出力
+//	outputs|||出力
+	input and output|||入力と出力
+	binary number|||2進数
+	binary numbers|||2進数
+	a binary digit|||バイナリーディジット
+	binary digits|||バイナリーディジット
+	Boolean variables|||ブール型変数
+	Boolean variable|||ブール型変数
+	a variable|||変数
+//	variables|||変数
+//	string|||文字列
 	numberic value|||数値
-	Arrays|||配列
-	index|||インデックス
+	an Array|||配列
+	the Array|||配列
+//	index|||インデックス
+	binary (base-2) numbers|||バイナリー（2進数）
+	binary (base-2)|||バイナリー（2進数）
 	Base-2|||2進数
 	base-10|||10進数
-	boolean|||ブール型
+	decimal (base-10) numbers|||デシマル（10進数）
+	decimal (base-10)|||デシマル（10進数）
+//	boolean|||ブール型
 	boolean operators|||ブール演算子
 	a boolean|||ブール値
 	sorting algorithm|||ソートアルゴリズム
+	an element|||要素
 
 // プログラミング、ソフトウェア開発
+	a programming language|||プログラミング言語	
+	programming language|||プログラミング言語
+	“pair programming”|||ペアプログラミング
+	pair programming|||ペアプログラミング
+	computer programming|||コンピュータ プログラミング
 	programming|||プログラミング
 	a mouse button|||マウスボタン
 	mouse button|||マウスボタン
 	an event handler|||イベントハンドラー
 	event handler|||イベントハンドラー
+	event handlers|||イベントハンドラー
 	an event|||イベント
 	event|||イベント
+	events|||イベント
 	the user|||ユーザー
+	the users|||ユーザー
 	user|||ユーザー
+	users|||ユーザー
+	conditional statements|||条件文
+	sorting methods|||並び替え方法
+	The inner loop|||内側ループ
+	an inner loop|||内側ループ
+	inner loop|||内側ループ
+	decimal value|||10進数の値
 
 // イメージ、グラフィックス、ゲーム関連の用語
 	an image|||画像
+//	images|||画像
 	the image|||画像
 	the screen|||画面
 	pixel|||ピクセル
 	a game sprite|||ゲームスプライト
 	a sprite|||スプライト
+
+// 複数ファイルにあるフレーズ
+	when button A is pressed|||Aボタンを押したら
+	a string variable|||文字列変数
+	string variable|||文字列変数
+	the students|||生徒たち
+	a number variable|||数値変数
+	an initial value|||初期値
+	for example,|||例えば、
+	For example|||例えば
+	decimal value|||10進数の値
+	an example|||ひとつの例
+	In pseudocode:|||疑似コードで：
+	our pseudocode|||疑似コード
+	the next student|||次の生徒
+	the next students|||次の生徒たち
+	the binary value|||2進数の値
+	a math addition block|||足し算ブロック
+	a addition math block|||足し算ブロック
+	a addition block|||足し算ブロック
+	math addition block|||足し算ブロック
+	addition math block|||足し算ブロック
+	addition block|||足し算ブロック
+	a math subtraction block|||足し算ブロック
+	a subtraction math block|||足し算ブロック
+	a subtraction block|||足し算ブロック
+	math subtraction block|||足し算ブロック
+	subtraction math block|||足し算ブロック
+	subtraction block|||足し算ブロック
+	a student|||生徒
+	horizontal x-axis|||水平なｘ軸
+	x-axis|||ｘ軸
+	vertical y-axis|||垂直なｙ軸
+	y-axis|||ｙ軸
+	Download your program to the micro:bit|||プログラムを micro:bit にダウンロードする
+
+// standards
+
+CPP.L1:6-05 Construct a program as a set of step-by-step instructions to be acted out|||CPP.L1:6-05 個別に実行される命令語の集合としてプログラムを構築できる
+2-A-2-1 Solicit and integrate peer feedback as appropriate to develop or refine a program|||2-A-2-1 フィードバックを活用してプログラムの開発と更新ができる
+2-A-6-10 Use an iterative design process (e.g., define the problem, generate ideas, build, test, and improve solutions) to solve problems, both independently and collaboratively.|||2-A-6-10 問題解決を行うために個人、もしくはグループでデザインプロセス（問題の定義、アイデアの提案、テスト、ソリューションの改善）を活用できる
+CT.L2-14 Examine connections between elements of mathematics and computer science, including binary, logic, sets and functions.|||CT.L2-14 2進数、論理、集合と関数を含む、数学の要素とコンピュータ・サイエンスの要素の関連について考察する
+CL.L2-03 Collaborate with peers, experts, and others using collaborative practices such as pair programming, working in project teams, and participating in group active learning activities|||CL.L2-03 協業プログラミング、プロジェクトチームでの作業、グループでの能動的学習アクティビティに参加するなど、協業演習を通じてクラスメート、専門家、および他の人と共同作業を行います。
+CT.L1:6-01 Understand and use the basic steps in algorithmic problem-solving|||CT.L1:6-01 基礎的なステップを使用してアルゴリズム形式の問題を解決できる
+CT.L1:6-02 Develop a simple understanding of an algorithm using computer-free exercise|||CT.L1:6-02 コンピュータを使わない課題を用いてアルゴリズムの初歩的な理解を伸ばす
+2-A-5-7 Create variables that represent different types of data and manipulate their values.|||2-A-5-7 異なるデータ型の変数を設定し、その値を操作できる
+CL.L2-05 Implement problem solutions using a programming language, including: looping behavior, conditional statements logic, expressions, variables, and functions.|||CL.L2-05 ループ、条件文付きのロジック、式、変数、および関数などを使用し、プログラミング言語で問題解決を実装する
+2-A-6-10 Use an iterative design process (e.g., define the problem, generate ideas, build, test, and improve solutions) to solve problems, both independently and collaboratively.|||<target>2-A-6-10 問題解決を行うために個人、もしくはグループでデザインプロセス（問題の定義、アイデアの提案、テスト、ソリューションの改善）を活用できる
+
+
+
+//
+Collaboration reflection|||共同作業と自己省察
+共同作業と内省|||共同作業と自己省察
+Reflection piece includes:|||自己省察の項目：
+ふりかえりに必要なすべての要素が含まれている|||自己省察の項目
+Reflection piece lacks 1 of the required elements.|||１つの項目が満たされていない。
+Reflection piece lacks 2 of the required elements.|||２つの項目が満たされていない。
+Reflection piece lacks 3 of the required elements.|||３つの項目が満たされていない。
+
+micro:bit program lacks 1 of the required elements.|||micro:bit プラグラムから１つの必要な要素が欠けている。
+micro:bit program lacks 1 of the required element.|||micro:bit プラグラムから１つの必要な要素が欠けている。
+micro:bit program lacks 2 of the required elements.|||micro:bit プラグラムから２つの必要な要素が欠けている。
+micro:bit program lacks 3 or more of the required elements.||| micro:bit プラグラムから３つまたはより多くの必要な要素が欠けている。
+micro:bit program lacks all of the required elements.||| micro:bit プラグラムからすべての必要な要素が欠けている。
+
+Have students write a reflection of about 150–300 words, addressing the following points|||>生徒たちに以下の内容を含む１５０～３００字程度のレビューを書いてもらいましょう。
+
+Uses variables in a way that is integral to the program|||変数をプログラムに不可欠な方法で使用している
+Uses mathematical operations to add, subtract, multiply, and/or divide variables|||変数を加算、減算、乗算、ならびに/または徐算するために数値演算を使用している
+Compiles and runs as intended|||目的通りにコンパイル、実行している
+Meaningful comments in code|||コードの中に意味のあるコメントがある
+Remind the students of all the different inputs available to them through the micro:bit.|||生徒たちにmicro:bitで利用可能な入力を全て説明します。
+
+Competency scores|||評価基準
+What feedback did your beta testers give you?|||ベータテスターからどのようなフィードバックを得ましたか？
+How did that help you improve your design?|||どのようにデザインの改善に役に立ちましたか？
+Describe a difficult point in the process of designing this program, and explain how you resolved it.|||このプログラムを設計する過程で難しかったことは何ですか？ どのようにしてその問題を解決したか説明しましょう。
+What was something that was surprising to you about the process of creating this program?|||このプログラムを作成する過程でなにか驚いたことはありますか？
+Describe something in your project that you are proud of.|||このプロジェクトであなたが一番満足していることは何ですか？
+
+
+// activity.xliff
+the blue gear-wheel icon||青いギアのアイコン
+the top left corner|||左上隅
+Player A’s score|||プレイヤーAの得点
+Player B’s score|||プレイヤーAの得点
+Player A|||プレイヤーA
+Player B|||プライヤーB
+Lesson objectives|||このレッスンの目標
+Students will...|||生徒は以下のことを学ぶことができます。
+Lesson structure|||学習の進め方

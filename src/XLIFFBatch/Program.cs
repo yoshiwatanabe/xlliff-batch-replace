@@ -26,6 +26,7 @@ namespace XLIFFBatch
             bool caseSensitive = bool.Parse(Configuration["options:caseSensitive"]);
             bool processLongerLengthFirst = bool.Parse(Configuration["options:processLongerLengthFirst"]);
             bool autoCreateOutputDirectories = bool.Parse(Configuration["options:autoCreateOutputDirectories"]);
+            var inputSearchPattern = Configuration["options:inputSearchPattern"];
 
             Console.WriteLine($"mapfile: {mapfile}");
             Console.WriteLine($"mapItemDelimiter: {mapItemDelimiter}");
@@ -34,6 +35,7 @@ namespace XLIFFBatch
             Console.WriteLine($"outputDirectory: {outputDirectory}");
             Console.WriteLine($"processLongerLengthFirst: {processLongerLengthFirst}");
             Console.WriteLine($"autoCreateOutputDirectories: {autoCreateOutputDirectories}");
+            Console.WriteLine($"inputSearchPattern: {inputSearchPattern}");
 
             if (!File.Exists(mapfile) ||
                 !Directory.Exists(inputDirectory) ||
@@ -48,10 +50,22 @@ namespace XLIFFBatch
                 CaseSensitive = caseSensitive
             };
 
-            var inputRootDirectoryFullPath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + inputDirectory);
-            var outputRootDirectoryFullPath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + outputDirectory);
+            var inputRootDirectoryFullPath = inputDirectory;
+            if (!Path.IsPathRooted(inputDirectory))
+            {
+                inputRootDirectoryFullPath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + inputDirectory);
+            }
 
-            System.Collections.Generic.IEnumerable<WorkUnit> workUnits = CreateWorkUnits(inputRootDirectoryFullPath, outputRootDirectoryFullPath);
+            var outputRootDirectoryFullPath = outputDirectory;
+            if (!Path.IsPathRooted(outputDirectory))
+            {
+                outputRootDirectoryFullPath = Path.GetFullPath(Directory.GetCurrentDirectory() + "\\" + outputDirectory);
+            }
+
+            var workUnits = CreateWorkUnits(
+                inputRootDirectoryFullPath, 
+                outputRootDirectoryFullPath,
+                inputSearchPattern);
 
             var replacements = File.ReadLines(Path.Combine(Directory.GetCurrentDirectory(), mapfile)).Select(line =>
             ReplacementParser.Parse(line, mapItemDelimiter, mapItemCommentDelimitter)).Where(_ => _ != null).ToList();
@@ -73,13 +87,13 @@ namespace XLIFFBatch
             Console.WriteLine("\nDone");
         }
 
-        public static void CreateWorkUnits(string inputDirectory, string outputDirectory, ref List<WorkUnit> workUnits)
+        public static void CreateWorkUnits(string inputDirectory, string outputDirectory, ref List<WorkUnit> workUnits, string searchPattern = "*.*")
         {
-            var inputDirectoryInfo = new DirectoryInfo(inputDirectory);
+            var inputDirectoryInfo = new DirectoryInfo(inputDirectory);            
 
             workUnits.AddRange(
                 inputDirectoryInfo
-                    .GetFiles()
+                    .GetFiles(searchPattern)
                     .Select(_ => _.Name)
                     .Select(name => new WorkUnit
                     {
@@ -94,14 +108,15 @@ namespace XLIFFBatch
                 CreateWorkUnits(
                     Path.Combine(inputDirectory, name),
                     Path.Combine(outputDirectory, name),
-                    ref workUnits);
+                    ref workUnits,
+                    searchPattern);
             }                
         }
 
-        private static IEnumerable<WorkUnit> CreateWorkUnits(string inputDirectory, string outputDirectory)
+        private static IEnumerable<WorkUnit> CreateWorkUnits(string inputDirectory, string outputDirectory, string searchPattern = "*.*")
         {
             List<WorkUnit> list = new List<WorkUnit>();
-            CreateWorkUnits(inputDirectory, outputDirectory, ref list);
+            CreateWorkUnits(inputDirectory, outputDirectory, ref list, searchPattern);
             return list;
         }
     }

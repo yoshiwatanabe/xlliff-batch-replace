@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Example\Input\activity.xliff">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
